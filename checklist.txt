@@ -1,0 +1,8 @@
+**Checklist**
+
+- Organized: Fixed Code Structure
+- No Specificity Issue
+- Atomic Design Principle
+- Easy to Understand (comments, variables)
+- Fully Customizable / Theamable
+- Reusable across Teams / Projects
