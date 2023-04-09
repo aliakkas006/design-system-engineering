@@ -1,0 +1,13 @@
+@import '../foundations/all';
+
+.dse-text {
+  color: $body-text-color;
+  background-color: $body-bg-color;
+  font-family: $body-font-family;
+}
+
+@each $size, $value in $fs {
+  .dse-text--#{$size} {
+    font-size: $value;
+  }
+}
