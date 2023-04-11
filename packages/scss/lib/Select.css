@@ -119,27 +119,54 @@
  * styles for components.
  *
  */
-.dse-text {
-  color: var(--dse-body-text-color, #1d1f22);
+.dse-select {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.dse-select__label {
+  align-items: center;
+  background-color: var(--dse-form-bg-color, #fff);
+  border: 1px solid var(--dse-form-border-color, #f1f2f3);
   font-family: var(--dse-body-font-family, "Playfair Display", serif);
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
 }
-
-.dse-text--xs {
-  font-size: 0.75rem;
+.dse-select__caret {
+  transition: all 250ms ease;
 }
-
-.dse-text--sm {
-  font-size: 0.875rem;
+.dse-select__caret--open {
+  transform: rotate(180deg);
 }
-
-.dse-text--base {
-  font-size: 1rem;
+.dse-select__caret--close {
+  transform: rotate(0deg);
 }
-
-.dse-text--lg {
-  font-size: 1.125rem;
+.dse-select__overlay {
+  padding: 0;
+  margin: 0;
+  box-shadow: 0 4px 11px rgba(157, 157, 157, 0.21);
+  list-style-type: none;
+  background-color: var(--dse-form-bg-color, #fff);
+  border: 1px solid var(--dse-form-border-color, #f1f2f3);
+  width: 100%;
+  z-index: 99;
+  position: absolute;
 }
-
-.dse-text--xl {
-  font-size: 1.5rem;
+.dse-select__option {
+  padding: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+.dse-select__option:hover {
+  background-color: var(--dse-form-bg-color-hover, #f1f2f3);
+}
+.dse-select__option--selected {
+  background-color: var(--dse-form-bg-option-selected, #5ece7b);
+  color: var(--dse-form-color-option-selected, #fff);
 }
